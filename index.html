@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Sanjay - Web Developer and Embedded Systems Developer. Specializing in modern websites, IoT, and hardware-software integration.">
-  <title>Sanjay | Web & Embedded Systems Developer</title>
+  <meta name="description" content="Professional Portfolio of Sanjay - Web Developer and Embedded Systems Developer. Specializing in modern websites, IoT, and hardware-software integration.">
+  <title>Sanjay | Professional Web & Embedded Developer</title>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +23,18 @@
   <canvas id="particle-canvas"></canvas>
   <div class="glow-bg"></div>
 
+  <!-- Floating Theme Switcher Widget -->
+  <div class="theme-switcher" id="theme-switcher">
+    <button class="theme-switcher-toggle" id="theme-toggle-btn" aria-label="Toggle Theme Options">
+      <i data-lucide="palette"></i>
+    </button>
+    <div class="theme-options">
+      <button class="theme-opt active" data-theme="blue" style="background: #0052ff;" title="Electric Blue"></button>
+      <button class="theme-opt" data-theme="purple" style="background: #a855f7;" title="Cyberpunk Purple"></button>
+      <button class="theme-opt" data-theme="emerald" style="background: #10b981;" title="Emerald Green"></button>
+    </div>
+  </div>
+
   <!-- Header / Navigation -->
   <header class="header" id="header">
     <div class="nav-container">
@@ -34,7 +46,9 @@
         <ul class="nav-list">
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Journey</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -96,14 +110,20 @@
             <p class="bio-text">
               Whether optimizing the execution loop of a microcontroller or crafting custom animations in a React app, I strive for efficiency, responsiveness, and premium user experiences.
             </p>
+            
+            <!-- Statistics Counters Row -->
             <div class="bio-stats">
               <div class="stat-card">
-                <span class="stat-num">Web</span>
-                <span class="stat-label">Fullstack & UI/UX</span>
+                <span class="stat-num" data-target="15">0</span>
+                <span class="stat-label">Projects Built</span>
               </div>
               <div class="stat-card">
-                <span class="stat-num">IoT</span>
-                <span class="stat-label">Embedded & Firmware</span>
+                <span class="stat-num" data-target="4">0</span>
+                <span class="stat-label">IoT Nodes</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num" data-target="98">0</span>
+                <span class="stat-label">% Code Quality</span>
               </div>
             </div>
           </div>
@@ -151,11 +171,57 @@
       </div>
     </section>
 
+    <!-- Experience / Education Timeline Section -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">02. My Journey</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 - Present</span>
+              <h3 class="timeline-job">Embedded Systems Intern</h3>
+              <h4 class="timeline-org">Apex Tech Solutions</h4>
+              <p>Developed FreeRTOS firmware and hardware drivers for IoT agricultural sensors. Integrated BLE and LoRa communication modules and optimized deep sleep efficiency.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 - 2024</span>
+              <h3 class="timeline-job">Freelance Web Developer</h3>
+              <h4 class="timeline-org">Self-employed</h4>
+              <p>Designed and built custom, responsive web portals, administrative dashboards, and client landing pages using HTML, CSS, JavaScript, and React.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2021 - 2025</span>
+              <h3 class="timeline-job">B.E. in Electronics & Communication</h3>
+              <h4 class="timeline-org">National Institute of Technology</h4>
+              <p>Specialized in Embedded Architecture, Hardware Programming, and Integrated Circuits. Developed multiple microcontroller-based academic capstones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Projects Section -->
     <section class="projects section" id="projects">
       <div class="projects-container container">
         <div class="section-header">
-          <span class="section-tag">02. Work Showcase</span>
+          <span class="section-tag">03. Work Showcase</span>
           <h2 class="section-title">Selected Projects</h2>
           <div class="section-underline"></div>
         </div>
@@ -190,8 +256,8 @@
               <span>React</span>
               <span>WebSockets</span>
               <span>Chart.js</span>
-              <span>IoT</span>
             </div>
+            <button class="btn btn-outline-sm btn-detail" data-project="smartgrid">View Details</button>
           </div>
 
           <!-- Project 2 -->
@@ -212,8 +278,8 @@
               <span>C / C++</span>
               <span>FreeRTOS</span>
               <span>STM32</span>
-              <span>SPI</span>
             </div>
+            <button class="btn btn-outline-sm btn-detail" data-project="robotics">View Details</button>
           </div>
 
           <!-- Project 3 -->
@@ -235,8 +301,8 @@
               <span>HTML5</span>
               <span>CSS Grid</span>
               <span>ES6 JS</span>
-              <span>Responsive</span>
             </div>
+            <button class="btn btn-outline-sm btn-detail" data-project="ecommerce">View Details</button>
           </div>
 
           <!-- Project 4 -->
@@ -256,9 +322,9 @@
             <div class="project-tags">
               <span>C++</span>
               <span>LoRaWAN</span>
-              <span>Arduino IDE</span>
               <span>Deep Sleep</span>
             </div>
+            <button class="btn btn-outline-sm btn-detail" data-project="agnode">View Details</button>
           </div>
 
           <!-- Project 5 -->
@@ -280,8 +346,8 @@
               <span>JavaScript</span>
               <span>CSS Animations</span>
               <span>Xterm.js</span>
-              <span>Web</span>
             </div>
+            <button class="btn btn-outline-sm btn-detail" data-project="ide">View Details</button>
           </div>
 
           <!-- Project 6 -->
@@ -301,11 +367,68 @@
             <div class="project-tags">
               <span>ESP32</span>
               <span>Bluetooth LE</span>
-              <span>C++</span>
               <span>Algorithms</span>
+            </div>
+            <button class="btn btn-outline-sm btn-detail" data-project="beacon">View Details</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Recommendations Section -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">04. Recommendations</span>
+          <h2 class="section-title">What Colleagues Say</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <div class="testimonials-slider-container">
+          <div class="testimonials-slider" id="testimonials-slider">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide active">
+              <div class="testimonial-content-box">
+                <i data-lucide="quote" class="quote-icon"></i>
+                <p class="testimonial-text">
+                  "Sanjay is an exceptional developer who bridges the gap between hardware and software seamlessly. His work on our IoT sensor nodes improved battery efficiency by 40% while maintaining absolute reliability in remote testing."
+                </p>
+                <div class="testimonial-author">
+                  <span class="author-name">Dr. Rajesh Kumar</span>
+                  <span class="author-title">R&D Director at Apex Tech Solutions</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-content-box">
+                <i data-lucide="quote" class="quote-icon"></i>
+                <p class="testimonial-text">
+                  "Sanjay designed and built our frontend platform. The implementation was highly performant, responsive, and the custom micro-interactions made the user experience incredibly premium. A delight to work with!"
+                </p>
+                <div class="testimonial-author">
+                  <span class="author-name">Sarah Jenkins</span>
+                  <span class="author-title">Co-Founder, Helix E-Commerce Group</span>
+                </div>
+              </div>
             </div>
           </div>
 
+          <!-- Slider Controls -->
+          <div class="slider-controls">
+            <button class="slider-control-btn" id="prev-slide-btn" aria-label="Previous Slide">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <div class="slider-dots" id="slider-dots">
+              <span class="slider-dot active" data-index="0"></span>
+              <span class="slider-dot" data-index="1"></span>
+            </div>
+            <button class="slider-control-btn" id="next-slide-btn" aria-label="Next Slide">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -314,7 +437,7 @@
     <section class="contact section" id="contact">
       <div class="contact-container container">
         <div class="section-header text-center">
-          <span class="section-tag">03. What's Next?</span>
+          <span class="section-tag">05. What's Next?</span>
           <h2 class="section-title">Let's Work Together</h2>
           <div class="section-underline"></div>
           <p class="section-desc">
@@ -393,10 +516,22 @@
     </section>
   </main>
 
+  <!-- Project Details Modal Overlay -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Details Modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Dynanmic project contents go here -->
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container container">
-      <p>© 2026 SANJAY. Designed with a custom Blue & Black theme.</p>
+      <p>© 2026 SANJAY. Designed with custom Blue, Purple & Emerald presets.</p>
       <div class="footer-links">
         <a href="#" class="footer-icon-link" aria-label="GitHub"><i data-lucide="github"></i></a>
         <a href="#" class="footer-icon-link" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
